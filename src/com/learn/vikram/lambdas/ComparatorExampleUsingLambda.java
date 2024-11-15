@@ -1,4 +1,4 @@
-package com.learn.vikram;
+package com.learn.vikram.lambdas;
 
 import java.util.Comparator;
 

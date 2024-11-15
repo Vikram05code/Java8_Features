@@ -1,4 +1,4 @@
-package com.learn.vikram;
+package com.learn.vikram.functionalInterfaces;
 
 import java.util.function.Consumer;
 
