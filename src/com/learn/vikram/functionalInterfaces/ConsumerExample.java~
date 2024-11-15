@@ -30,7 +30,7 @@ public class ConsumerExample {
         System.out.println("printNameAndActivitiesUsingCondition");
         List<Student> studentList = StudentDataBase.getAllStudents();
         studentList.forEach(student->{
-            if(student.getGradeLevel()>=3 && student.getGpa()>=3.8){
+            if(student.getGradeLevel()>=3 && student.getGpa()>=3.5){
                 consumer3.andThen(consumer4).andThen(consumer2).accept(student);
             }
         });
