@@ -32,9 +32,33 @@ public class PredicateStudentExample {
         });
     }
 
+    public static void filterStudents(){
+        System.out.println("-------------filterStudent-------------");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student->{
+            if(p1.and(p2).test(student)){
+                System.out.println(student);
+            }
+        });
+    }
+
+    public static void filterStudentsUsingOR(){
+        System.out.println("-------------filterStudent-------------");
+        List<Student> studentList = StudentDataBase.getAllStudents();
+        studentList.forEach(student->{
+            if(p1.or(p2).negate().test(student)){
+                System.out.println(student);
+            }else{
+                System.out.println(student);
+            }
+        });
+    }
+
 
     public static void main(String[] args){
         filterStudentByGradeLevel();
         filterStudentByGPA();
+        filterStudents();
+
     }
 }
